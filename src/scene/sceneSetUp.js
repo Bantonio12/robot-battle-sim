@@ -1,4 +1,4 @@
-//여기에 코드를 짜야한다는 거를 잊지 않기 위한 주석
+//아래 코드들 모듈화시켜서 각각의 스크립트로 만들기.
 
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
@@ -8,7 +8,7 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 //기본 세팅 (장면, 카메라, 렌더러)
 // 1. 장면 설정
 const scene = new THREE.Scene();
-scene.background = new THREE.Color(0x222222);  //이게 무슨 색이지 (??아 예??)
+scene.background = new THREE.Color(0x222222);  //이게 무슨 색이지 (??아 예??) => 0x222222는 아주 어두운 짙은 회색(Dark Gray)
 
 // 2. 카메라 설정
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
@@ -35,7 +35,7 @@ const controls = new OrbitControls(camera, renderer.domElement);
 const loader = new GLTFLoader();
 
 function loadCharacter(url, positionX) {
-    loader.load(url, (gltf) => {
+    loader.load('../assets/Universal_Animation_Library_2[Standard]/Unreal-Godot/UAL2_Standard.glb', (gltf) => {
         const model = gltf.scene;
         model.position.set(positionX, 0, 0); // 캐릭터 위치 배치
         scene.add(model);
@@ -43,8 +43,8 @@ function loadCharacter(url, positionX) {
 }
 
 // 두 캐릭터 로드
-loadCharacter('path/to/character1.glb', -1.5); // TODO : 경로 수정 필요
-loadCharacter('path/to/character2.glb', 1.5); // TODO : 경로 수정 필요
+loadCharacter('../assets/Universal_Animation_Library_2[Standard]/Unreal-Godot/UAL2_Standard.glb', -1.5); // TODO : 경로 수정 필요
+loadCharacter('../assets/Universal_Animation_Library_2[Standard]/Unreal-Godot/UAL2_Standard.glb', 1.5); // TODO : 경로 수정 필요
 
 
 //-----------------------------------------------------------
