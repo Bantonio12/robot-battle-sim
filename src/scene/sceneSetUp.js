@@ -8,7 +8,7 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 //기본 세팅 (장면, 카메라, 렌더러)
 // 1. 장면 설정
 const scene = new THREE.Scene();
-scene.background = new THREE.Color(0x222222);  //이게 무슨 색이지
+scene.background = new THREE.Color(0x222222);  //이게 무슨 색이지 (??아 예??)
 
 // 2. 카메라 설정
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
@@ -43,8 +43,8 @@ function loadCharacter(url, positionX) {
 }
 
 // 두 캐릭터 로드
-loadCharacter('path/to/character1.glb', -1.5);
-loadCharacter('path/to/character2.glb', 1.5);
+loadCharacter('path/to/character1.glb', -1.5); // TODO : 경로 수정 필요
+loadCharacter('path/to/character2.glb', 1.5); // TODO : 경로 수정 필요
 
 
 //-----------------------------------------------------------
