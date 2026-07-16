@@ -5,7 +5,7 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 
 const camera = createCamera();
 const renderer = createRenderer();
-const scene = createScene(camera, renderer);
+const scene = createScene();
 const controls = new OrbitControls(camera, renderer.domElement);
 
 function animate() {
