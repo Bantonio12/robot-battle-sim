@@ -9,8 +9,6 @@ const loader = new GLTFLoader();
  * @param {function} onLoadCallback - 로드가 완료되었을 때 실행할 함수 (모델을 인자로 받음)
  */
 
-url = '../assets/Universal_Animation_Library_2[Standard]/Unreal-Godot/UAL2_Standard.glb'; // 기본 경로 설정
-
 export function loadCharacter(url, onLoadCallback) {
     loader.load(
         url,
