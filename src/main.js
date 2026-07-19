@@ -13,7 +13,7 @@ const scene = createScene();
 const controls = new OrbitControls(camera, renderer.domElement);
 
 //hitbox code
-initCharacterWithHitbox(scene, '/models/UAL2_Standard.glb', 'calf_r', new THREE.Vector3(0.2, 0.3, 0.2));
+initCharacterWithHitbox(scene, '/models/UAL2_Standard.glb', 'UAL2_Standard');
 
 function animate() {
   requestAnimationFrame(animate);

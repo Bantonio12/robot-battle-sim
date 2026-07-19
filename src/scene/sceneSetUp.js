@@ -27,14 +27,15 @@ export function createScene() {
 
     // 두 캐릭터 로드
     // modelLoader.js에서 loadCharacter 함수를 가져와서 사용하도록 변경함
-    loadCharacter('models/UAL2_Standard.glb', (model) => {
-        model.position.set(-1.5, 0, 0); // 첫 번째 캐릭터 위치
-        scene.add(model);
-    });
-    loadCharacter('models/UAL2_Standard.glb', (model) => {
-        model.position.set(1.5, 0, 0); // 두 번째 캐릭터 위치
-        scene.add(model);
-    });
+    
+    // loadCharacter('models/UAL2_Standard.glb', (model) => {
+    //     model.position.set(-1.5, 0, 0); // 첫 번째 캐릭터 위치
+    //     scene.add(model);
+    // });
+    // loadCharacter('models/UAL2_Standard.glb', (model) => {
+    //     model.position.set(1.5, 0, 0); // 두 번째 캐릭터 위치
+    //     scene.add(model);
+    // });
 
     // animate도 main.js에서 콜하는 방식으로 변경함
     return scene;
